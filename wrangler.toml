@@ -1,0 +1,12 @@
+name = "image-bg-remover"
+compatibility_date = "2026-03-23"
+account_id = "e103da8f489a4eb08217b8d7d7b6f833"
+
+[site]
+bucket = "./dist"
+
+[build]
+command = "npm run build"
+
+[pages]
+production_branch = "master"
