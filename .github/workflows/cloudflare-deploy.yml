@@ -26,7 +26,11 @@ jobs:
           cache: 'npm'
 
       - name: Install dependencies
-        run: npm install
+        run: |
+          echo "Clearing npm cache..."
+          npm cache clean --force || true
+          echo "Installing dependencies..."
+          npm install --no-package-lock --prefer-offline=false
 
       - name: Build project
         run: |
